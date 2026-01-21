@@ -2,9 +2,9 @@
     import axios from "axios";
     import { onMount } from "svelte";
 
-    let data = [];
 
-    let payload:any;
+
+    let payload:any[] = [];
     onMount(async () => {
 
 
@@ -28,15 +28,17 @@
             }
             );
 
-            payload = response.data.data.posts;
-       
+            payload = [...payload,...response.data.data.posts];
+            
+            
+            
+        }
+        
+        
 
-    }
-
-
-
-
-
+    
+    
+    
 )
 
 
