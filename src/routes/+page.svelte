@@ -5,7 +5,12 @@
 
 
     let payload:any[] = [];
+    let loading = true;
+
+    let loadingMore = false
     onMount(async () => {
+
+
 
 
         const query = `
@@ -17,6 +22,8 @@
                 }
             }
         `;
+
+        
     
        const response = await axios.post(
             'https://graphqlplaceholder.vercel.app/graphql',
@@ -29,6 +36,8 @@
             );
 
             payload = [...payload,...response.data.data.posts];
+            loading = false
+            loadingMore = false
             
             
             
@@ -54,22 +63,35 @@
 
 <section class="flex flex-row justify-between gap-5 flex-wrap">
     
+    {#if !loading}
     
-    {#each payload as item}
-    
-    
-    
+        {#each payload as item}
+
         <div class="w-[320px] h-[400px] bg-[grey]">
             <p>{item.id}</p>
             <p>{item.title}</p>
             <p>{item.body}</p>
+            
+            
+            
+            
+            </div>
+            
+            
+            
+            
+            
+            
+            {/each}
+    {:else}
+            
+            <div>Loading...</div>
+    {/if}
     
-    
-    
-    
-    </div>
-    {/each}
-    
+
+    {#if loadingMore}
+            <div>Loading More...</div>
+    {/if}
     
     
 </section>
