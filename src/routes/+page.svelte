@@ -15,7 +15,7 @@
 
         const query = `
             query {
-                posts {
+                posts(first: 10) {
                     id
                     title
                     body
