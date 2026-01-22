@@ -61,31 +61,86 @@
     console.log("Payload",payload)
 }}>CLICK</button>
 
-<section class="flex flex-row justify-between gap-5 flex-wrap">
+<section>
     
     {#if !loading}
     
-        {#each payload as item}
-
-        <div class="w-[320px] h-[400px] bg-[grey]">
-            <p>{item.id}</p>
-            <p>{item.title}</p>
-            <p>{item.body}</p>
+        <div  class="flex flex-row justify-items-normal gap-5 flex-wrap">
+            {#each payload as item}
+            <div class="w-[320px] h-[400px] bg-[grey] mx-auto">
+                <p>{item.id}</p>
+                <p>{item.title}</p>
+                <p>{item.body}</p>
             
             
             
             
-            </div>
+                </div>
             
             
             
             
             
             
-            {/each}
+                {/each}
+        </div>
     {:else}
+            <div  class="flex flex-row justify-center gap-5 flex-wrap">
+                
+                 <div class="mx-auto w-[320px] h-[400px] bg-gray-200">
+
+                    <div class="mt-3 mx-auto bg-[grey] w-[60%] h-6 animate-pulse"></div>
+                 </div>
+
+                 <div class="mx-auto w-[320px] h-[400px] bg-gray-200">
+
+                    <div class="mt-3 mx-auto bg-[grey] w-[60%] h-6 animate-pulse"></div>
+                 </div>
+                 <div class="mx-auto w-[320px] h-[400px] bg-gray-200">
+
+                    <div class="mt-3 mx-auto bg-[grey] w-[60%] h-6 animate-pulse"></div>
+                 </div>
+                 <div class="mx-auto w-[320px] h-[400px] bg-gray-200">
+
+                    <div class="mt-3 mx-auto bg-[grey] w-[60%] h-6 animate-pulse"></div>
+                 </div>
+
+                 <div class="mx-auto w-[320px] h-[400px] bg-gray-200">
+
+                    <div class="mt-3 mx-auto bg-[grey] w-[60%] h-6 animate-pulse"></div>
+                 </div><div class="mx-auto w-[320px] h-[400px] bg-gray-200">
+
+                    <div class="mt-3 mx-auto bg-[grey] w-[60%] h-6 animate-pulse"></div>
+                 </div><div class="mx-auto w-[320px] h-[400px] bg-gray-200">
+
+                    <div class="mt-3 mx-auto bg-[grey] w-[60%] h-6 animate-pulse"></div>
+                 </div>
+
+                 <div class="mx-auto w-[320px] h-[400px] bg-gray-200">
+
+                    <div class="mt-3 mx-auto bg-[grey] w-[60%] h-6 animate-pulse"></div>
+                 </div><div class="mx-auto w-[320px] h-[400px] bg-gray-200">
+
+                    <div class="mt-3 mx-auto bg-[grey] w-[60%] h-6 animate-pulse"></div>
+                 </div><div class="mx-auto w-[320px] h-[400px] bg-gray-200">
+
+                    <div class="mt-3 mx-auto bg-[grey] w-[60%] h-6 animate-pulse"></div>
+                 </div><div class="mx-auto w-[320px] h-[400px] bg-gray-200">
+
+                    <div class="mt-3 mx-auto bg-[grey] w-[60%] h-6 animate-pulse"></div>
+                 </div>
+                 
+
+                 
+                
+            </div>
+             
+
+
+
+
             
-            <div>Loading...</div>
+
     {/if}
     
 
