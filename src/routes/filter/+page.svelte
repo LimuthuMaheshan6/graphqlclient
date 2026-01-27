@@ -32,9 +32,12 @@
     let loadingMore = false
 
     onMount(async () => {
+        loadInitial()
+    }    
+)
 
-
-
+        async function loadInitial() {
+            
 
         const query = `
             query {
@@ -64,17 +67,9 @@
             
             console.log("data", response.data.data.users)
             
+        
+
         }
-
-        
-
-        
-
-    
-    
-    
-)
-
 
 
         async function loadMore(Cursor:string) {
@@ -117,16 +112,6 @@
             console.log("data", response.data.data.users)
             
         }
-
-
-              
-            
-            
-            
-        
-        
-
-
 
 
 </script>

@@ -6,6 +6,7 @@
     <a href="/query">Query</a>
     <a href="/scroll">Scroll</a>
     <a href="/client">Client</a>
+    <a href="/filter">Filter</a>
 
 
 
