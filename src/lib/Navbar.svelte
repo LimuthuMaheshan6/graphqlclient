@@ -5,6 +5,8 @@
     <a href="/">Home</a>
     <a href="/query">Query</a>
     <a href="/scroll">Scroll</a>
+    <a href="/client">Client</a>
+
 
 
 </nav>
