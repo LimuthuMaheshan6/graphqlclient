@@ -7,6 +7,8 @@
     <a href="/scroll">Scroll</a>
     <a href="/client">Client</a>
     <a href="/filter">Filter</a>
+    <a href="/search">Search</a>
+
 
 
 
